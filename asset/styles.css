@@ -1,0 +1,153 @@
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #272222;
+    color: #333;
+}
+
+/* Header Styling */
+.main-header {
+    background-color: #c40404;
+    color: #fff;
+    text-align: center;
+    padding: 30px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.main-header .header-content {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.main-header h1 {
+    font-size: 2.5em;
+    margin: 0;
+    font-weight: bold;
+}
+
+.main-header p {
+    font-size: 1.2em;
+    margin: 10px 0 0;
+    color: #e0e0e0;
+}
+
+/* Container for the Book List */
+#book-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Individual Book Card */
+.book {
+    background-color: #ffffff86;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    padding: 15px;
+}
+
+.book:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Book Image */
+.book img {
+    max-width: 100%;
+    height: auto;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 15px;
+}
+
+/* Book Title */
+.book h3 {
+    font-size: 1.2em;
+    margin: 10px 0;
+    color: #ffffff;
+}
+
+/* Link Button */
+.book a {
+    display: inline-block;
+    background-color: #c40404;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.book a:hover {
+    border: 1px solid black;
+    background-color: transparent;
+    color: black;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #book-list {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 15px;
+    }
+
+    .book h3 {
+        font-size: 1em;
+    }
+
+    .book a {
+        padding: 8px 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    #book-list {
+        padding: 10px;
+    }
+
+    .book {
+        padding: 10px;
+    }
+
+    .book h3 {
+        font-size: 0.9em;
+    }
+
+    .book a {
+        font-size: 0.9em;
+        padding: 6px 10px;
+    }
+}
+/* Responsive Design for Header */
+@media (max-width: 768px) {
+    .main-header h1 {
+        font-size: 2em;
+    }
+    .main-header p {
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-header {
+        padding: 20px 10px;
+    }
+    .main-header h1 {
+        font-size: 1.5em;
+    }
+    .main-header p {
+        font-size: 0.9em;
+    }
+}
