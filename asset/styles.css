@@ -96,6 +96,25 @@ body {
     color: black;
 }
 
+.popup {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    background-color: white;
+    color: black;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: opacity 0.5s ease;
+    opacity: 0;
+    visibility: hidden;
+}
+.popup.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     #book-list {
