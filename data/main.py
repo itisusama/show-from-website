@@ -39,7 +39,7 @@ for div in divs:
     })
 
 # Save the books data to a JSON file
-with open('books.json', 'w', encoding='utf-8') as f:
+with open('data/books.json', 'w', encoding='utf-8') as f:
     json.dump(books, f, ensure_ascii=False, indent=4)
 
 print("Books data saved to books.json")
